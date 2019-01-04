@@ -4,6 +4,7 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -20,6 +21,7 @@ public class BaseTest {
 		System.setProperty("webdriver.gecko.driver", "./drivers/geckodriver.exe");
 		System.setProperty("webdriver.ie.driver", "./drivers/IEDriverServer.exe");
 		WebDriver driver = new ChromeDriver();
+		//WebDriver driver = new InternetExplorerDriver();
 		WebDriverWait wait = new WebDriverWait(driver, 60); // 60 to 90
 
 		driver.manage().window().maximize();
